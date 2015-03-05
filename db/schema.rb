@@ -11,9 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150305005920) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "destinations", force: :cascade do |t|
+    t.string   "name"
+    t.string   "region"
+    t.string   "country"
+    t.text     "about"
+    t.integer  "fall_max"
+    t.integer  "fall_min"
+    t.integer  "winter_max"
+    t.integer  "winter_min"
+    t.integer  "spring_max"
+    t.integer  "spring_min"
+    t.integer  "summer_max"
+    t.integer  "summer_min"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.text     "about_br"
+    t.text     "about_en"
+  end
 
 end
