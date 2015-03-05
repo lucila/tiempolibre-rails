@@ -1,7 +1,7 @@
 test: &test
   adapter: postgresql
   encoding: utf8
-  database: rails-bootstrap_test
+  database: tiempolibre_rails_test
   username: postgres
 
 cucumber:
