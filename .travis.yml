@@ -18,9 +18,9 @@ services:
 
 before_script:
   - cp config/database.travis.yml config/database.yml
-  - psql -c "CREATE USER rails-bootstrap WITH PASSWORD 'rails-bootstrap';" -U postgres
-  - psql -c "DROP DATABASE IF EXISTS rails-bootstrap_test;" -U postgres
-  - psql -c "CREATE DATABASE rails-bootstrap_test ENCODING 'utf8';" -U postgres
+  - psql -c "CREATE USER tiempolibre_rails WITH PASSWORD 'tiempolibre_rails';" -U postgres
+  - psql -c "DROP DATABASE IF EXISTS tiempolibre_rails_test;" -U postgres
+  - psql -c "CREATE DATABASE tiempolibre_rails_test ENCODING 'utf8';" -U postgres
   - bundle exec rake db:migrate test:prepare
 
 script:
@@ -31,7 +31,7 @@ script:
 notifications:
   email:
     recipients:
-      - rails-bootstrap-dev@wolox.com.ar
+      - tiempolibre_rails-dev@wolox.com.ar
 
 cache:
   bundler: true

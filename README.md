@@ -22,7 +22,7 @@ Kickoff for Rails web applications.
 - Install all the gem included in the project.
 
  ```bash
-  > git clone https://github.com/Wolox/rails-bootstrap.git
+  > git clone https://github.com/Wolox/tiempolibre_rails.git
   > gem install bundler
   > rbenv rehash
   > bundle
