@@ -11,15 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305005920) do
+ActiveRecord::Schema.define(version: 20150308213647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "countries", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "destinations", force: :cascade do |t|
     t.string   "name"
-    t.string   "region"
-    t.string   "country"
     t.text     "about"
     t.integer  "fall_max"
     t.integer  "fall_min"
@@ -33,6 +37,18 @@ ActiveRecord::Schema.define(version: 20150305005920) do
     t.datetime "updated_at", null: false
     t.text     "about_br"
     t.text     "about_en"
+    t.integer  "region_id"
   end
+
+  add_index "destinations", ["region_id"], name: "index_destinations_on_region_id", using: :btree
+
+  create_table "regions", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "country_id"
+  end
+
+  add_index "regions", ["country_id"], name: "index_regions_on_country_id", using: :btree
 
 end
