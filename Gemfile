@@ -69,7 +69,9 @@ gem 'pundit'
 # Exceptions Report
 gem 'airbrake'
 
-gem 'globalize', '~> 4.0.2'
+gem 'globalize', '~> 5.0.0'
+gem 'rails-i18n'
+gem 'globalize-accessors'
 
 group :development do
   gem 'better_errors'

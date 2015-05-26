@@ -1,5 +1,7 @@
 TiempolibreRails::Application.routes.draw do
 
+  devise_for :users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   resources :destinations, only: [:show, :index]
 
   root to: 'destinations#index'

@@ -6,6 +6,7 @@ class Destination < ActiveRecord::Base
   after_initialize :initialize_fields
 
   translates :name, :about
+  globalize_accessors locales: [:es, :en, :"pt-BR"], attributes: [:name, :about]
 
   def initialize_fields
     self.fall_max ||= 0

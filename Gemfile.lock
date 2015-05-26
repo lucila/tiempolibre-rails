@@ -172,9 +172,11 @@ GEM
       multi_json (~> 1.3)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
-    globalize (4.0.3)
-      activemodel (>= 4.0.0, < 5)
-      activerecord (>= 4.0.0, < 5)
+    globalize (5.0.1)
+      activemodel (>= 4.2.0, < 4.3)
+      activerecord (>= 4.2.0, < 4.3)
+    globalize-accessors (0.2.1)
+      globalize (~> 5.0, >= 5.0.0)
     google-webfonts-rails (0.0.4)
       activesupport (> 3.2.0, < 5.0)
     has_scope (0.6.0.rc)
@@ -270,6 +272,9 @@ GEM
       rails-deprecated_sanitizer (>= 1.0.1)
     rails-html-sanitizer (1.0.1)
       loofah (~> 2.0)
+    rails-i18n (4.0.4)
+      i18n (~> 0.6)
+      railties (~> 4.0)
     rails_12factor (0.0.3)
       rails_serve_static_assets
       rails_stdout_logging
@@ -416,7 +421,8 @@ DEPENDENCIES
   factory_girl_rails
   faker
   formtastic
-  globalize (~> 4.0.2)
+  globalize (~> 5.0.0)
+  globalize-accessors
   google-webfonts-rails
   inherited_resources!
   jquery-rails
@@ -433,6 +439,7 @@ DEPENDENCIES
   pry-stack_explorer
   pundit
   rails (= 4.2.0)
+  rails-i18n
   rails_12factor
   ransack
   responders (= 2.0)
