@@ -1,5 +1,26 @@
-h1 Destinations#index
-p Find me in app/views/destinations/index.html.slim
-
-- @destinations.each do |destination|
-  p = destination.name
+#content
+  .inner
+    .general_content
+      .main_content
+        .separator style="height:35px;"
+        #filter.block_filter_1
+          ul
+            li.active
+              a href="all"  Todos
+            - @regions.each do |region|
+              li
+                a href=region.name = region.name
+        #filtered_container.block_portfolio_2.c_4
+          - @destinations.each do |destination|
+            .item.argentina class=(destination.region.name)
+              a href=destination_path(destination)
+                .image
+                  img alt=destination.name src="http://tiempolibreviajes.com.ar/web/fotosdestinos/bariloche_01.jpg"
+                  .info
+                .description
+                  h6 = destination.name
+                  p.tags
+                    a href="#" = destination.region.country.name
+              .clearboth
+          .clearboth
+      .clearboth

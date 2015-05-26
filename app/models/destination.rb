@@ -5,6 +5,8 @@ class Destination < ActiveRecord::Base
 
   after_initialize :initialize_fields
 
+  translates :name, :about
+
   def initialize_fields
     self.fall_max ||= 0
     self.fall_min ||= 0

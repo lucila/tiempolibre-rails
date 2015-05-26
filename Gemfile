@@ -69,6 +69,8 @@ gem 'pundit'
 # Exceptions Report
 gem 'airbrake'
 
+gem 'globalize', '~> 4.0.2'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

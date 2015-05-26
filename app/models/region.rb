@@ -3,4 +3,6 @@ class Region < ActiveRecord::Base
   has_many :destinations
 
   validates :country, presence: true
+
+  translates :name
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308213647) do
+ActiveRecord::Schema.define(version: 20150526000012) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,29 @@ ActiveRecord::Schema.define(version: 20150308213647) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  create_table "country_translations", force: :cascade do |t|
+    t.integer  "country_id", null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  add_index "country_translations", ["country_id"], name: "index_country_translations_on_country_id", using: :btree
+  add_index "country_translations", ["locale"], name: "index_country_translations_on_locale", using: :btree
+
+  create_table "destination_translations", force: :cascade do |t|
+    t.integer  "destination_id", null: false
+    t.string   "locale",         null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "about"
+  end
+
+  add_index "destination_translations", ["destination_id"], name: "index_destination_translations_on_destination_id", using: :btree
+  add_index "destination_translations", ["locale"], name: "index_destination_translations_on_locale", using: :btree
 
   create_table "destinations", force: :cascade do |t|
     t.string   "name"
@@ -35,12 +58,21 @@ ActiveRecord::Schema.define(version: 20150308213647) do
     t.integer  "summer_min"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.text     "about_br"
-    t.text     "about_en"
     t.integer  "region_id"
   end
 
   add_index "destinations", ["region_id"], name: "index_destinations_on_region_id", using: :btree
+
+  create_table "region_translations", force: :cascade do |t|
+    t.integer  "region_id",  null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
+
+  add_index "region_translations", ["locale"], name: "index_region_translations_on_locale", using: :btree
+  add_index "region_translations", ["region_id"], name: "index_region_translations_on_region_id", using: :btree
 
   create_table "regions", force: :cascade do |t|
     t.string   "name"

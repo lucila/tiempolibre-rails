@@ -8,3 +8,13 @@
 #= require jquery_ujs
 #= require twitter/bootstrap
 #= require_tree .
+# require prettyphoto
+# require tools
+# require scrollto
+# require flexslider
+# require ajaxform
+# require tweet
+# require sort
+# require roundabout
+# require onebyone
+
