@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :set_locale
+  before_action :initialize_menu
 
   def set_locale
     if cookies[:tourist_locale] && I18n.available_locales.include?(cookies[:tourist_locale].to_sym)
@@ -13,5 +14,9 @@ class ApplicationController < ActionController::Base
       cookies.permanent[:tourist_locale] = l
     end
     I18n.locale = l
+  end
+
+  def initialize_menu
+    @regions = Region.all.includes(:destinations)
   end
 end

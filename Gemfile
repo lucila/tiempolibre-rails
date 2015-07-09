@@ -26,7 +26,7 @@ gem 'coffee-rails'
 gem 'uglifier'
 gem 'less-rails'
 gem 'therubyracer'
-gem 'twitter-bootstrap-rails'
+#gem 'twitter-bootstrap-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -92,20 +92,20 @@ end
 
 group :test, :development do
 
-  gem 'rspec-rails'
-  gem 'factory_girl_rails'
-  gem 'faker'
-  gem 'cucumber-rails', require: false
+#  gem 'rspec-rails'
+#  gem 'factory_girl_rails'
+#  gem 'faker'
+#  gem 'cucumber-rails', require: false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
 
   # Modify time in tests
-  gem 'timecop'
+#  gem 'timecop'
 
   # Cucumber with JS
-  gem 'poltergeist'
+#  gem 'poltergeist'
 
   # Save and open page cucumber
-  gem 'launchy'
+#  gem 'launchy'
 end
 
 group :production, :staging do

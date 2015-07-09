@@ -32,20 +32,13 @@ html
                       | Excursiones
                       span.subtext elija el destino
                     ul
-                      li
-                        a href="#"  Argentina
-                        ul
-                          - @destinations.each do |destination|
-                            - if destination.region.country.name.eql?('argentina')
-                            li
-                              a href=destination_path(destination) = destination.name
-                      li
-                        a href="#"  Chile
-                        ul
-                          - @destinations.each do |destination|
-                            - if destination.region.country.name.eql?('chile')
-                            li
-                              a href=destination_path(destination) = destination.name
+                      - @regions.each do |region|
+                        li
+                          = link_to region.name, '#'
+                          ul
+                            - region.destinations.each do |destination|
+                              li
+                                = link_to destination.name, destination_path(destination)
                   li
                     a href="#"
                       | Cruceros

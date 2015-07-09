@@ -22,14 +22,14 @@ ActiveAdmin.register Destination do
       f.input :about
       f.input :about_en, as: :text
       f.input :about_pt_br, as: :text
-      f.input :fall_max
-      f.input :fall_min
-      f.input :winter_max
-      f.input :winter_min
-      f.input :spring_max
-      f.input :spring_min
-      f.input :summer_max
-      f.input :summer_min
+      f.input :fall_max, wrapper_html: { class: "temperature-field" }
+      f.input :fall_min, wrapper_html: { class: "temperature-field" }
+      f.input :winter_max, wrapper_html: { class: "temperature-field" }
+      f.input :winter_min, wrapper_html: { class: "temperature-field" }
+      f.input :spring_max, wrapper_html: { class: "temperature-field" }
+      f.input :spring_min, wrapper_html: { class: "temperature-field" }
+      f.input :summer_max, wrapper_html: { class: "temperature-field" }
+      f.input :summer_min, wrapper_html: { class: "temperature-field" }
     end
     f.actions
   end
