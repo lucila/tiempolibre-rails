@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150526022122) do
+ActiveRecord::Schema.define(version: 20150709193422) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,6 +48,28 @@ ActiveRecord::Schema.define(version: 20150526022122) do
   add_index "country_translations", ["country_id"], name: "index_country_translations_on_country_id", using: :btree
   add_index "country_translations", ["locale"], name: "index_country_translations_on_locale", using: :btree
 
+  create_table "cruise_translations", force: :cascade do |t|
+    t.integer  "cruise_id",  null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.text     "about"
+  end
+
+  add_index "cruise_translations", ["cruise_id"], name: "index_cruise_translations_on_cruise_id", using: :btree
+  add_index "cruise_translations", ["locale"], name: "index_cruise_translations_on_locale", using: :btree
+
+  create_table "cruises", force: :cascade do |t|
+    t.string   "name"
+    t.text     "about"
+    t.integer  "region_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "cruises", ["region_id"], name: "index_cruises_on_region_id", using: :btree
+
   create_table "destination_translations", force: :cascade do |t|
     t.integer  "destination_id", null: false
     t.string   "locale",         null: false
@@ -77,6 +99,50 @@ ActiveRecord::Schema.define(version: 20150526022122) do
   end
 
   add_index "destinations", ["region_id"], name: "index_destinations_on_region_id", using: :btree
+
+  create_table "excursion_translations", force: :cascade do |t|
+    t.integer  "excursion_id", null: false
+    t.string   "locale",       null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.string   "name"
+    t.text     "description"
+  end
+
+  add_index "excursion_translations", ["excursion_id"], name: "index_excursion_translations_on_excursion_id", using: :btree
+  add_index "excursion_translations", ["locale"], name: "index_excursion_translations_on_locale", using: :btree
+
+  create_table "excursions", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "destination_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "excursions", ["destination_id"], name: "index_excursions_on_destination_id", using: :btree
+
+  create_table "ranch_translations", force: :cascade do |t|
+    t.integer  "ranch_id",   null: false
+    t.string   "locale",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "name"
+    t.text     "about"
+  end
+
+  add_index "ranch_translations", ["locale"], name: "index_ranch_translations_on_locale", using: :btree
+  add_index "ranch_translations", ["ranch_id"], name: "index_ranch_translations_on_ranch_id", using: :btree
+
+  create_table "ranches", force: :cascade do |t|
+    t.string   "name"
+    t.text     "about"
+    t.integer  "destination_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "ranches", ["destination_id"], name: "index_ranches_on_destination_id", using: :btree
 
   create_table "region_translations", force: :cascade do |t|
     t.integer  "region_id",  null: false
@@ -116,4 +182,7 @@ ActiveRecord::Schema.define(version: 20150526022122) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "cruises", "regions"
+  add_foreign_key "excursions", "destinations"
+  add_foreign_key "ranches", "destinations"
 end

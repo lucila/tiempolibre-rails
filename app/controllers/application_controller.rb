@@ -18,5 +18,7 @@ class ApplicationController < ActionController::Base
 
   def initialize_menu
     @regions = Region.all.includes(:destinations)
+    @cruises = Cruise.all
+    @ranches = Ranch.all
   end
 end

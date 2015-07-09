@@ -19,13 +19,12 @@ case Rails.env
     nor_este_arg = Region.create!(name: 'Noreste Argentino', country: arg)
     cuyo = Region.create!(name: 'Cuyo', country: arg)
     cordoba_r = Region.create!(name: 'Córdoba', country: arg)
-    cruceros_r_arg = Region.create!(name: 'Cruceros por Argentina', country: arg)
     nor_oeste_arg = Region.create!(name: 'Noroeste Argentino', country: arg)
 
     norte_chileno = Region.create!(name: 'Norte Chileno', country: chile)
     patagonia_ch = Region.create!(name: 'Patagonia Chilena', country: chile)
     santiago_r = Region.create!(name: 'Santiago de Chile', country: chile)
-    cruceros_r_ch = Region.create!(name: 'Cruceros por Chile', country: chile)
+
 
     puts 'creating destinations'
     # ARGENTINA
@@ -68,8 +67,6 @@ case Rails.env
     iguazu = Destination.create!(name: 'Iguazú', region: nor_este_arg)
     mendoza = Destination.create!(name: 'Mendoza y San Rafael', region: cuyo)
     cordoba = Destination.create!(name: 'Córdoba', region: cordoba_r)
-    cruceros_arg = Destination.create!(name: 'Cruceros', region: cruceros_r_arg)
-    cruce_andino = Destination.create!(name: 'Cruce Andino', region: patagonia_arg)
     pehuenia = Destination.create!(name: 'Villa Pehuenia', region: patagonia_arg)
     salta = Destination.create!(name: 'Salta y Jujuy', region: nor_oeste_arg)
     tucuman = Destination.create!(name: 'Tucumán', region: nor_oeste_arg)
@@ -84,6 +81,17 @@ case Rails.env
     montt = Destination.create!(name: 'Puerto Montt', region: patagonia_ch)
     varas = Destination.create!(name: 'Puerto Varas', region: patagonia_ch)
     atacama = Destination.create!(name: 'San Pedro de Atacama', region: patagonia_ch)
-    cruceros_ch = Destination.create!(name: 'Cruceros', region: cruceros_r_ch)
 
+
+    # cruceros
+    puts 'creating cruises'
+    cruceros_arg = Cruise.create!(name: 'Cruceros Argentinos', region: baires_r)
+    cruce_andino = Cruise.create!(name: 'Cruce Andino', region: patagonia_arg)
+    cruceros_ch = Cruise.create!(name: 'Cruceros Chilenos', region: patagonia_ch)
+
+    #ESTOS SON DE PRUEBA
+    puts 'creating FAKE estancias'
+    Ranch.create!(name: 'Estancia de prueba Angostura A', destination: angostura)
+    Ranch.create!(name: 'Estancia de prueba Angostura B', destination: angostura)
+    Ranch.create!(name: 'Estancia de prueba Baires 1', destination: angostura)
 end
