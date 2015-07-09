@@ -6,4 +6,5 @@ class Region < ActiveRecord::Base
 
   translates :name
   globalize_accessors locales: [:es, :en, :"pt-BR"], attributes: [:name]
+
 end

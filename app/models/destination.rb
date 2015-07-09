@@ -3,6 +3,8 @@ class Destination < ActiveRecord::Base
 
   validates :region, presence: true
 
+  has_one :country, through: :region
+
   after_initialize :initialize_fields
 
   translates :name, :about

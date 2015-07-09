@@ -1,4 +1,4 @@
-ActiveAdmin.register Region do
+ActiveAdmin.register Region, as: 'Geographic Region' do
 
   permit_params :name, :name_en, :name_pt_br, :country_id
 

@@ -7,11 +7,13 @@ ActiveAdmin.register Destination do
     id_column
     column :name
     column :region
+    column :country
     actions
   end
 
-  filter :region
   filter :name
+  filter :region
+  filter :country
 
   form do |f|
     f.inputs "Destino" do
