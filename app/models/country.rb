@@ -3,4 +3,6 @@ class Country < ActiveRecord::Base
 
   translates :name
   globalize_accessors locales: [:es, :en, :"pt-BR"], attributes: [:name]
+
+  has_many :regions
 end

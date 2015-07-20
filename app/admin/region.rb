@@ -1,4 +1,4 @@
-ActiveAdmin.register Region, as: 'Geographic Region' do
+ActiveAdmin.register Region, as: 'Regiones' do
 
   permit_params :name, :name_en, :name_pt_br, :country_id
 
@@ -10,8 +10,8 @@ ActiveAdmin.register Region, as: 'Geographic Region' do
     actions
   end
 
-  filter :country
   filter :name
+  filter :country
 
   form do |f|
     f.inputs "Region" do
@@ -27,9 +27,14 @@ ActiveAdmin.register Region, as: 'Geographic Region' do
     h3 'Detalles'
     attributes_table do
       row :id
+      row :country
       row :name
       row :name_en
       row :name_pt_br
+    end
+
+    table_for region.destinations do
+      column 'Destinos', :name
     end
   end
 

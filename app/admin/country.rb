@@ -1,4 +1,4 @@
-ActiveAdmin.register Country do
+ActiveAdmin.register Country, as: 'Paises' do
 
   permit_params :name, :name_en, :name_pt_br
 
@@ -27,6 +27,10 @@ ActiveAdmin.register Country do
       row :name
       row :name_en
       row :name_pt_br
+    end
+
+    table_for country.regions do
+      column 'Regiones', :name
     end
   end
 

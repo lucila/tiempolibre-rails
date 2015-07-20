@@ -4,6 +4,8 @@ class Destination < ActiveRecord::Base
   validates :region, presence: true
 
   has_one :country, through: :region
+  has_many :excursions
+  has_many :ranches
 
   after_initialize :initialize_fields
 

@@ -1,4 +1,4 @@
-ActiveAdmin.register Destination do
+ActiveAdmin.register Destination, as: 'Destinos' do
 
   permit_params :name, :name_en, :name_pt_br, :region_id, :about, :about_en, :about_pt_br, :fall_max, :fall_min, :winter_max, :winter_min, :spring_max, :spring_min, :summer_max, :summer_min
 
@@ -55,6 +55,14 @@ ActiveAdmin.register Destination do
       row :spring_min
       row :summer_max
       row :summer_min
+    end
+
+    table_for destination.excursions do
+      column 'Excursiones', :name
+    end
+
+    table_for destination.ranches do |ranch|
+      column 'Estancias', :name
     end
   end
 
