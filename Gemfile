@@ -33,7 +33,10 @@ gem 'jquery-rails'
 
 gem 'loadjs'
 
-gem 'carrierwave'
+# images on s3
+gem 'fog'
+gem 'carrierwave', '~>0.10.0'
+gem 'rmagick', git: 'git://github.com/gemhome/rmagick.git'
 
 gem 'turbolinks'
 

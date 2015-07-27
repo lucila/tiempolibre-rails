@@ -6,11 +6,14 @@ class Destination < ActiveRecord::Base
   has_one :country, through: :region
   has_many :excursions
   has_many :ranches
+  has_many :pictures, as: :imageable
 
   after_initialize :initialize_fields
 
   translates :name, :about
   globalize_accessors locales: [:es, :en, :"pt-BR"], attributes: [:name, :about]
+
+  accepts_nested_attributes_for :pictures, reject_if: :all_blank , allow_destroy: true
 
   def initialize_fields
     self.fall_max ||= 0

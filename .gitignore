@@ -27,6 +27,7 @@ coverage/*
 
 # Configuration
 .security.yml
+.amazons3.yml
 
 # Vagrant
 .vagrant/

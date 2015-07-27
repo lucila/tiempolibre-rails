@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150709193422) do
+ActiveRecord::Schema.define(version: 20150726213101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(version: 20150709193422) do
   create_table "country_translations", force: :cascade do |t|
     t.integer  "country_id", null: false
     t.string   "locale",     null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "name"
   end
 
@@ -73,8 +73,8 @@ ActiveRecord::Schema.define(version: 20150709193422) do
   create_table "destination_translations", force: :cascade do |t|
     t.integer  "destination_id", null: false
     t.string   "locale",         null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "name"
     t.text     "about"
   end
@@ -122,6 +122,16 @@ ActiveRecord::Schema.define(version: 20150709193422) do
 
   add_index "excursions", ["destination_id"], name: "index_excursions_on_destination_id", using: :btree
 
+  create_table "pictures", force: :cascade do |t|
+    t.integer  "imageable_id"
+    t.string   "imageable_type"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "image"
+  end
+
+  add_index "pictures", ["imageable_type", "imageable_id"], name: "index_pictures_on_imageable_type_and_imageable_id", using: :btree
+
   create_table "ranch_translations", force: :cascade do |t|
     t.integer  "ranch_id",   null: false
     t.string   "locale",     null: false
@@ -147,8 +157,8 @@ ActiveRecord::Schema.define(version: 20150709193422) do
   create_table "region_translations", force: :cascade do |t|
     t.integer  "region_id",  null: false
     t.string   "locale",     null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string   "name"
   end
 

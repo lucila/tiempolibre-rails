@@ -1,6 +1,9 @@
 ActiveAdmin.register Destination, as: 'Destinos' do
 
-  permit_params :name, :name_en, :name_pt_br, :region_id, :about, :about_en, :about_pt_br, :fall_max, :fall_min, :winter_max, :winter_min, :spring_max, :spring_min, :summer_max, :summer_min
+  permit_params :name, :name_en, :name_pt_br, :region_id, :about, :about_en, :about_pt_br,
+                :fall_max, :fall_min, :winter_max, :winter_min, :spring_max, :spring_min,
+                :summer_max, :summer_min,
+                pictures_attributes: [:id, :image, :remote_image_url, :_destroy]
 
   index do
     selectable_column
@@ -15,7 +18,7 @@ ActiveAdmin.register Destination, as: 'Destinos' do
   filter :region
   filter :country
 
-  form do |f|
+  form html: { enctype: "multipart/form-data" } do |f|
     f.inputs "Destino" do
       f.input :region
       f.input :name
@@ -32,6 +35,13 @@ ActiveAdmin.register Destination, as: 'Destinos' do
       f.input :spring_min, wrapper_html: { class: "temperature-field" }
       f.input :summer_max, wrapper_html: { class: "temperature-field" }
       f.input :summer_min, wrapper_html: { class: "temperature-field" }
+      if f.object.id.present?
+        f.has_many :pictures do |ff|
+          ff.input :image, hint: ff.template.image_tag(ff.object.image.url(:thumb)), wrapper_html: { class: 'admin-form-image' }
+          ff.input :remote_image_url
+          ff.input :_destroy, as: :boolean, required: false, label: 'Eliminar'
+        end
+      end
     end
     f.actions
   end
@@ -55,6 +65,7 @@ ActiveAdmin.register Destination, as: 'Destinos' do
       row :spring_min
       row :summer_max
       row :summer_min
+      render '/admin/shared/image_thumbs', pictures: destination.pictures
     end
 
     table_for destination.excursions do
