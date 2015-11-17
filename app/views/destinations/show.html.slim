@@ -1,1 +1,65 @@
-p = @destination.name
+#content
+  .inner
+    .general_content
+      .main_content
+        .separator style="height:37px;"
+        .block_portfolio_item_1
+          .image
+            #slider_portfolio_item_1.slider_portfolio_item.flexslider
+              ul.slides
+                - @destination.pictures.each do |picture|
+                  li
+                    = image_tag picture.image.url, alt: @destination.name
+          .description
+            h5 = t('destinations.about', name: @destination.name)
+            p.category
+              span = "#{t('destinations.region')}: "
+              = link_to @destination.region.name, destinations_path(region_id: @destination.region.id)
+            p = @destination.about
+
+
+            h6 = t('destinations.average_temperatures')
+            ul.details.weather
+              li.summer
+                span = "#{t('weather.summer')}:  #{@destination.summer_min}ºC - #{@destination.summer_max}ºC"
+              li.autumm
+                span = "#{t('weather.autumm')}:  #{@destination.fall_min}ºC - #{@destination.fall_max}ºC"
+              li.winter
+                span = "#{t('weather.winter')}:  #{@destination.winter_min}ºC - #{@destination.winter_max}ºC"
+              li.spring
+                span = "#{t('weather.spring')}:  #{@destination.spring_min}ºC - #{@destination.spring_max}ºC"
+
+
+            p Perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+          .clearboth
+      .clearboth
+      .line_2 style="margin:7px 0px 35px;"
+      - if @destination.excursions.any?
+        .block_our_team
+          h4 = t('destinations.excursions')
+          - @destination.excursions.each do |excursion|
+            .teammate
+              .photo
+                - if excursion.pictures.any?
+                  = image_tag excursion.pictures.first.image.url
+                - else
+                  = image_tag('earth190.png', height: '128', class: 'default-picture')
+              h6.name = excursion.name
+              p = excursion.description
+              p.position
+      .clearboth
+      .line_2 style="margin:7px 0px 35px;"
+      - if @destination.ranches.any?
+        .block_our_team
+          h4 = t('destinations.ranches')
+          - @destination.ranches.each do |ranch|
+            .teammate
+              .photo
+                - if ranch.pictures.any?
+                  = image_tag ranch.pictures.first.image.url
+                - else
+                  = image_tag('rural.png', height: '128', class: 'default-picture')
+              h6.name = ranch.name
+              p = ranch.about
+              p.position
+

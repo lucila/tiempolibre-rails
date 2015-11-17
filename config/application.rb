@@ -59,5 +59,6 @@ module TiempolibreRails
 
     # For Heroku deployments
     config.assets.initialize_on_precompile = true
+
   end
 end

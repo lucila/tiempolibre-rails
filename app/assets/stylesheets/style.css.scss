@@ -2979,6 +2979,7 @@ nav.main_menu > select {
 	position:absolute;
 	right:0px;
 	top:50%;
+	z-index: 100;
 }
 .block_portfolio_item_1 .flex-direction-nav li:first-child {
 	left:0px;
@@ -3004,6 +3005,7 @@ nav.main_menu > select {
 	left:0px;
 	bottom:8px;
 	text-align:center;
+	z-index: 100;
 }
 .block_portfolio_item_1 .flex-control-nav li {
 	padding:0px 1px;

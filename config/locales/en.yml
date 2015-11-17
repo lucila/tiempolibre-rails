@@ -1,28 +1,19 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
   destinations:
-    bariloche:
-      about: 'On the southern shore of Lake Nahuel Huapi National Park falls within the Nahuel Huapi, and 760 m, is the city of San Carlos de Bariloche, one of the most populated cities in the province of Black River, and one of the resorts most important in Argentina.'
-    calafate:
-      about: 'El Calafate located on the southern shore of Lago Argentino and at the foot of the hill homa � nimo, is the starting point for all excursions to Los Glaciares National Park and surrounding areas. With a complete infrastructure tur�stica that offers multiple services hoteler�a. A variety of restaurants, shopping and entertainment, always with the personal touch of a people who make hospitality a cult. Declared a UNESCO World Natural Heritage Site in 1981, Glacier National Park is home to more than 350 glaciers s. From El Calafate are 80 km of Patagonian steppe and forest to the glacier most famous: the Perito Moreno. Also sailing between t � n � mpanos of Lake Argentino, you can access other great colossus of ice as Upsala, Onelli, Spegazzini, May, among others. El Calafate is the best place to discover the beauty Patagonian � nica. Cave paintings, archaeological sites, horseback riding, traves�as 4x4, watching wildlife auta � ctona, along with a variety of winter activities like skating vast ice sheets, balloon flights, make El Calafate the perfect place to live and feel the adventure, mystery and unspoilt nature.'
+    about: 'About %{name}'
+    region: 'Region'
+    average_temperatures: 'Average temperatures'
+    excursions: 'Excursions'
+    ranches: 'Ranches'
+  weather:
+    max: 'Max'
+    min: 'Min'
+    summer: 'Summer'
+    autumm: 'Fall'
+    spring: 'Spring'
+    winter: 'Winter'
+
+
+
+
 

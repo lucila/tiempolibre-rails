@@ -31,6 +31,9 @@ gem 'therubyracer'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+# added by Lu
+gem 'flexslider', :git => 'https://github.com/constantm/Flexslider-2-Rails-Gem.git'
+
 gem 'loadjs'
 
 # images on s3

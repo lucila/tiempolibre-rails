@@ -1,3 +1,35 @@
 // Place all the styles related to the destinations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.teammate {
+  .photo {
+    text-align: center;
+  }
+}
+
+img.default-picture {
+  padding: 15px;
+  width: 128px !important;
+}
+
+.weather {
+  li {
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+    padding-left: 25px !important;
+  }
+  li.summer {
+    background-image: asset_url('summer.png');
+  }
+  li.autumm {
+    background-image: asset_url('autumm.png');
+  }
+  li.winter {
+    background-image: asset_url('winter.png');
+  }
+  li.spring {
+    background-image: asset_url('spring.png');
+  }
+}

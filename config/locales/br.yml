@@ -1,7 +1,16 @@
 en:
   destinations:
-    bariloche:
-      about: 'Na margem sul do Lago Nahuel Huapi National Park cai dentro do lago Nahuel Huapi, e 760 m, a cidade de San Carlos de Bariloche, uma das cidades mais povoadas da provincia de Rio Negro, e um dos resorts mais importante da Argentina.'
-    calafate:
-      about: 'El Calafate localizado na margem sul do Lago Argentino e ao p� do homa � nimo colina, � o ponto de partida para todas as excurs�es para Parque Nacional Los Glaciares e zonas circundantes. Com uma completa infra-estrutura tur�stica que oferece servi�os hoteler�a m�ltipla. Uma variedade de restaurantes, lojas e entretenimento, sempre com o toque pessoal de um povo que faz da hospitalidade uma seita. Declarada Patrim�nio Mundial pela UNESCO Natural em 1981, Glacier National Park � o lar de mais de 350 geleiras s. De El Calafate s�o 80 km de floresta e estepe patag�nica � geleira mais famosa: o Perito Moreno. Tamb�m a navega��o entre t � n � mpanos do Lago Argentino, voc� pode acessar outra grande colosso de gelo, Upsala, Onelli, Spegazzini, Maio, entre outros. El Calafate � o melhor lugar para descobrir a beleza nica � Patag�nia. Pinturas rupestres, s�tios arqueol�gicos, passeios a cavalo, traves�as 4x4, observando fauna � auta ctona, juntamente com uma variedade de atividades de inverno como patina��o gelo enormes, v�os de bal�o, fazer El Calafate o lugar perfeito para viver e sentir a aventura, mist�rio e natureza intocada.'
+    about: 'Sobre %{name}'
+    region: 'Região'
+    average_temperatures: 'As temperaturas médias'
+    excursions: 'Excursões'
+    ranches: 'Estancias'
+  weather:
+    max: 'Max'
+    min: 'Min'
+    summer: 'Veraõ'
+    autumm: 'Fall'
+    spring: 'Spring'
+    winter: 'Winter'
+
 

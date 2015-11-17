@@ -48,6 +48,13 @@ GIT
     active_model_serializers (0.8.3)
       activemodel (>= 3.0)
 
+GIT
+  remote: https://github.com/constantm/Flexslider-2-Rails-Gem.git
+  revision: 3a87fd2250bc60659b0a3c494bb5a246d3b85395
+  specs:
+    flexslider (2.2.0)
+      sass-rails (>= 3.1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -462,6 +469,7 @@ DEPENDENCIES
   coffee-rails
   database_cleaner!
   devise
+  flexslider!
   fog
   formtastic
   globalize (~> 5.0.0)

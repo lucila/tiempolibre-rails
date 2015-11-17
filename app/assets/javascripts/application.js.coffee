@@ -6,14 +6,15 @@
 #
 #= require jquery
 #= require jquery_ujs
-#= require_tree .
+
+#= require jquery.flexslider
+
 # require prettyphoto
 # require tools
 # require scrollto
-# require flexslider
 # require ajaxform
 # require tweet
 # require sort
 # require roundabout
 # require onebyone
-
+#= require_tree .

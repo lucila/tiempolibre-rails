@@ -1,7 +1,16 @@
 es:
   destinations:
-    bariloche:
-      about: 'Sobre la costa meridional del lago Nahuel Huapi, comprendida dentro del Parque Nacional Nahuel Huapi, y a 760 msnm, se encuentra la cuidad de San Carlos de Bariloche; una de las ciudades más pobladas de la provincia de Rió Negro, y uno de los centros turísticos más importantes de la Republica Argentina.'
-    calafate:
-      about: 'El Calafate emplazada en la margen sur del Lago Argentino y al pie del cerro homónimo, es el punto de partida para todas las excursiones al Parque Nacional Los Glaciares y sus alrededores. Con una completa infraestructura turística que ofrece múltiples servicios de hotelería. Una gran variedad de restaurantes, centros comerciales y recreativos, siempre con el toque personalizado de un pueblo que hace de la hospitalidad un culto. Declarado por la UNESCO Patrimonio Natural Mundial de la Humanidad en 1981, el Parque Nacional Los Glaciares alberga a más de 350 glaciares. Desde El Calafate son 80 km de estepa patagonica y bosque hasta el glaciar mas famoso: el Perito Moreno. También navegando entre témpanos del Lago Argentino, se puede acceder a otros grandes colosos de hielo como el Glaciar Upsala, Onelli, Spegazzini, Mayo, entre otros. El Calafate es el mejor lugar para descubrir la belleza patagónica. Pinturas rupestres, sitios arqueológicos, cabalgatas, travesías 4x4, avistaje de flora y fauna autóctona, junto con una gran variedad de actividades invernales, como el patinaje sobre inmensos mantos de hielo, vuelos en globo, hacen de El Calafate el lugar perfecto para vivir y sentir la aventura, el misterio y la naturaleza virgen.'
+    about: 'Sobre %{name}'
+    region: 'Región'
+    average_temperatures: 'Temperaturas promedio'
+    excursions: 'Excursiones'
+    ranches: 'Estancias'
+  weather:
+    max: 'Max'
+    min: 'Min'
+    summer: 'Verano'
+    autumm: 'Otoño'
+    spring: 'Primavera'
+    winter: 'Invierno'
+
 
