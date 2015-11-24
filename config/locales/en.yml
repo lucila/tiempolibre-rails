@@ -1,4 +1,5 @@
 en:
+  all: 'All'
   destinations:
     about: 'About %{name}'
     region: 'Region'
@@ -12,6 +13,8 @@ en:
     autumm: 'Fall'
     spring: 'Spring'
     winter: 'Winter'
+
+
 
 
 

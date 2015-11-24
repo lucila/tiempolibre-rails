@@ -4,15 +4,7 @@
       .main_content
         .separator style="height:37px;"
         .block_portfolio_item_1
-          .image
-            #slider_portfolio_item_1.slider_portfolio_item.flexslider
-              - if @destination.pictures.empty?
-                .default-destination-picture
-              - else
-                ul.slides
-                  - @destination.pictures.each do |picture|
-                    li
-                      = image_tag picture.image.url, alt: @destination.name
+          = render 'shared/main_carousel', item: @destination
           .description
             h5 = t('destinations.about', name: @destination.name)
             p.category

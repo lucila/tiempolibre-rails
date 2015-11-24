@@ -1,0 +1,17 @@
+.item-with-picture {
+  .image {
+    text-align: center;
+    width: 100% !important;
+    height: 145px !important;
+    object-fit: cover !important;
+    img{
+      width: 100% !important;
+      height: 100% !important;
+    }
+    img.default-picture {
+      padding: 5px;
+      width: 128px !important;
+      height: 128px !important;
+    }
+  }
+}

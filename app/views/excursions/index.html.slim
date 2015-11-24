@@ -6,12 +6,12 @@
         #filter.block_filter_1
           ul
             li class=('active' unless @region.present?)
-              = link_to t('destinations.all'), destinations_path
+              = link_to t('excursions.all'), excursions_path
             - @regions.each do |region|
               li class=('active' if @region.present? && @region.id == region.id)
-                = link_to region.name, destinations_path(region_id: region.id)
+                = link_to region.name, excursions_path(region_id: region.id)
         #filtered_container.block_portfolio_2.c_4
-          - @destinations.each do |destination|
-            = render 'shared/index_item', link: destination_path(destination), item: destination, subtitle: destination.region.country.name
+          - @excursions.each do |excursion|
+            = render 'shared/index_item', link: destination_path(excursion), item: excursion, subtitle: excursion.destination.name
           .clearboth
       .clearboth

@@ -1,0 +1,13 @@
+.item.item-with-picture
+  a href=link
+    .image
+      - if item.pictures.any?
+        = image_tag item.pictures.first.image.url
+      - else
+        = image_tag('earth190.png', height: '128', class: 'default-picture')
+      .info
+    .description
+      h6 = item.name
+      p.tags
+        a href="#" = subtitle
+  .clearboth

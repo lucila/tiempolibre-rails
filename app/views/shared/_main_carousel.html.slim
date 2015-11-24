@@ -1,0 +1,9 @@
+.image
+  #slider_portfolio_item_1.slider_portfolio_item.flexslider
+    - if item.pictures.empty?
+      .default-destination-picture
+    - else
+      ul.slides
+        - item.pictures.each do |picture|
+          li
+            = image_tag picture.image.url, alt: @destination.name
