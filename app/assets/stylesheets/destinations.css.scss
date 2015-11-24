@@ -5,17 +5,34 @@
 .teammate {
   .photo {
     text-align: center;
+    width: 218px !important;
+    height: 145px !important;
+    object-fit: cover !important;
+    img{
+      width: 100% !important;
+      height: 100% !important;
+    }
+    img.default-picture {
+      padding: 5px;
+      width: 128px !important;
+      height: 128px !important;
+    }
   }
 }
 
-img.default-picture {
-  padding: 15px;
-  width: 128px !important;
+.default-destination-picture{
+  width: 500px;
+  height: 330px;
+  padding: 20px;
+  background-image: asset_url('earth_big.png');
+  background-repeat: no-repeat;
+  background-size: 350px;
+  background-position: center;
 }
 
 .weather {
   li {
-    background-size: 14px;
+    background-size: 20px;
     background-repeat: no-repeat;
     background-position-y: 5px;
     padding-left: 25px !important;
@@ -30,6 +47,6 @@ img.default-picture {
     background-image: asset_url('winter.png');
   }
   li.spring {
-    background-image: asset_url('spring.png');
+    background-image: asset_url('spring1.png');
   }
 }
