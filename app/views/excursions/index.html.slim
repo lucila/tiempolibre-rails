@@ -12,6 +12,6 @@
                 = link_to region.name, excursions_path(region_id: region.id)
         #filtered_container.block_portfolio_2.c_4
           - @excursions.each do |excursion|
-            = render 'shared/index_item', link: destination_path(excursion), item: excursion, subtitle: excursion.destination.name
+            = render 'shared/index_item', link: excursion_path(excursion), item: excursion, subtitle: excursion.destination.name
           .clearboth
       .clearboth

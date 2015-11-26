@@ -6,4 +6,4 @@
       ul.slides
         - item.pictures.each do |picture|
           li
-            = image_tag picture.image.url, alt: @destination.name
+            = image_tag picture.image.url, alt: item.name

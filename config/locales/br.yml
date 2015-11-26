@@ -6,6 +6,8 @@ en:
     average_temperatures: 'As temperaturas médias'
     excursions: 'Excursões'
     ranches: 'Estancias'
+  excursions:
+    other_excursions: 'Outros excursões nos %{destination}'
   weather:
     max: 'Max'
     min: 'Min'

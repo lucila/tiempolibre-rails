@@ -11,7 +11,8 @@ class ExcursionsController < TiempolibreAppController
   end
 
   def show
-    @destination = Destination.find(params[:id])
-    @title = @destination.name
+    @excursion = Excursion.find(params[:id])
+    @other_excursions = @excursion.destination.excursions - [@excursion]
+    @title = @excursion.name
   end
 end

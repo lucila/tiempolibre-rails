@@ -1,8 +1,9 @@
-.teammate
-  .photo
-    - if excursion.pictures.any?
-      = image_tag excursion.pictures.first.image.url
-    - else
-      = image_tag('earth190.png', height: '128', class: 'default-picture')
-  h6.name = excursion.name
-  p.position = destination.name
+= link_to excursion_path(excursion) do
+  .teammate
+    .photo
+      - if excursion.pictures.any?
+        = image_tag excursion.pictures.first.image.url
+      - else
+        = image_tag('earth190.png', height: '128', class: 'default-picture')
+    h6.name = excursion.name
+    p.position = excursion.destination.name
