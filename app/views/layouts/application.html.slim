@@ -24,20 +24,7 @@ html
               = render 'layouts/menu'
               /! --------------------- END OF MAIN MENU ------------------------
               .clearboth
-          section.section_title
-            .inner
-              .block_title
-                h1
-                  span.portfolio_title_icon
-                  = @title
-
-                #breadcrumbs-one
-                  ul#breadcrumbs-inner
-                    li
-                      a href="index.html"  Inicio
-                    li
-                      a.current href="#"  Destinos
-              .clearboth
+          = render '/shared/breadcrumb'
 
       = yield
 
