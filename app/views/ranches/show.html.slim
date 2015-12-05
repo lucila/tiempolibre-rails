@@ -1,0 +1,30 @@
+#content
+  .inner
+    .general_content
+      .main_content
+        .separator style="height:37px;"
+        .block_portfolio_item_1
+          = render 'shared/main_carousel', item: @ranch
+          .description
+            h5 = t('destinations.about', name: @ranch.name)
+            p.category
+              span = "#{t('destinations.region')}: "
+              = link_to @ranch.destination.region.name, destinations_path(region_id: @ranch.destination.region.id)
+            p = @ranch.about
+          .clearboth
+      .clearboth
+      - excursions = @ranch.destination.excursions
+      - if excursions.any?
+        .line_2 style="margin:7px 0px 35px;"
+        .block_our_team
+          h4 = t('excursions.excursions')
+          - excursions.each do |excursion|
+            = render 'shared/excursion_item', excursion: excursion, destination: @destination
+        .clearboth
+      - if @other_ranches.any?
+        .line_2 style="margin:7px 0px 35px;"
+        .block_our_team
+          h4 = t('ranches.other_ranches', destination: @ranch.destination.name)
+          - @other_ranches.each do |ranch|
+            = render 'shared/ranch_item', ranch: ranch, destination: @destination
+

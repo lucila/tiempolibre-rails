@@ -8,6 +8,8 @@ en:
     ranches: 'Ranches'
   excursions:
     other_excursions: 'Other excursion in %{destination}'
+  ranches:
+    other_ranches: 'Other ranches in %{destination}'
   weather:
     max: 'Max'
     min: 'Min'

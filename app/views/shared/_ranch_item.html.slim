@@ -1,8 +1,9 @@
-.teammate
-  .photo
-    - if ranch.pictures.any?
-      = image_tag ranch.pictures.first.image.url
-    - else
-      = image_tag('rural.png', height: '128', class: 'default-picture')
-  h6.name = ranch.name
-  p.position = ranch.destination.name
+= link_to ranch_path(ranch) do
+  .teammate
+    .photo
+      - if ranch.pictures.any?
+        = image_tag ranch.pictures.first.image.url
+      - else
+        = image_tag('rural.png', height: '128', class: 'default-picture')
+    h6.name = ranch.name
+    p.position = ranch.destination.name

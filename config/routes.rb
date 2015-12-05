@@ -4,6 +4,7 @@ TiempolibreRails::Application.routes.draw do
   ActiveAdmin.routes(self)
   resources :destinations, only: [:show, :index]
   resources :excursions, only: [:show, :index]
+  resources :ranches, only: [:show, :index]
 
   root to: 'destinations#index'
   get '/change_locale/:locale', to: 'settings#change_locale', as: :change_locale

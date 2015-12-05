@@ -1,0 +1,17 @@
+#content
+  .inner
+    .general_content
+      .main_content
+        .separator style="height:35px;"
+        #filter.block_filter_1
+          ul
+            li class=('active' unless @region.present?)
+              = link_to t('ranches.all'), ranches_path
+            - @regions.each do |region|
+              li class=('active' if @region.present? && @region.id == region.id)
+                = link_to region.name, ranches_path(region_id: region.id)
+        #filtered_container.block_portfolio_2.c_4
+          - @ranches.each do |ranch|
+            = render 'shared/index_item', link: ranch_path(ranch), item: ranch, subtitle: ranch.destination.name
+          .clearboth
+      .clearboth
