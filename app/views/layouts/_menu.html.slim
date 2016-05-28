@@ -2,23 +2,24 @@ nav.main_menu
   ul
     li.current_page_item
       a href=destinations_path
-        | Destinos
-        span.subtext ver todos
+        span = t('main.destinations')
+        span.subtext = t('main.see_all')
       = render '/shared/destinations_menu'
     li
       a href=excursions_path
-        | Excursiones
-        span.subtext elija el destino
+        span = t('main.excursions')
+        span.subtext = t('main.choose_destination')
       = render '/shared/excursions_menu'
-    li
-      a href="#"
-        | Cruceros Patagónicos
-        span.subtext ver todos
-      ul
-        - @cruises.each do |cruise|
-          li
-            = link_to cruise.name, '#'
+    / menu para cruceros
+    / li
+    /   a href="#"
+    /     span = t('main.cruises')
+    /     span.subtext = t('main.see_all')
+    /   ul
+    /     - @cruises.each do |cruise|
+    /       li
+    /         = link_to cruise.name, '#'
     li
       = link_to contact_index_path
-        | Contacto
-        span.subtext información y reclamos
+        span = t('main.contact')
+        span.subtext = t('main.information')

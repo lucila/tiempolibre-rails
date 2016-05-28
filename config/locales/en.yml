@@ -2,6 +2,13 @@ en:
   all: 'All'
   main:
     destination: 'Destination'
+    destinations: 'Destinations'
+    excursions: 'Excursions'
+    see_all: 'See all'
+    choose_destination: 'Choose destination'
+    cruises: 'Patagonic cruises'
+    contact: 'Contact'
+    information: 'Information'
   destinations:
     about: 'About %{name}'
     region: 'Region'

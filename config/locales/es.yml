@@ -2,6 +2,13 @@ es:
   all: 'Todas'
   main:
     destination: 'Destino'
+    destinations: 'Destinos'
+    excursions: 'Excursiones'
+    see_all: 'Ver todos'
+    choose_destination: 'Elegir destino'
+    cruises: 'Cruceros patagónicos'
+    contact: 'Contacto'
+    information: 'Información'
   destinations:
     about: 'Sobre %{name}'
     region: 'Región'

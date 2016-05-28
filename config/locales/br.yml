@@ -2,6 +2,13 @@ en:
   all: 'Tudo'
   main:
     destination: 'Destino'
+    destinations: 'Destino'
+    excursions: 'Excursões'
+    see_all: 'Ver todos'
+    choose_destination: 'Escolha o destino'
+    cruises: 'Cruzeiros Patagonia'
+    contact: 'Contato'
+    information: 'Informação'
   destinations:
     about: 'Sobre %{name}'
     region: 'Região'

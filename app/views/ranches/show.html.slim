@@ -10,6 +10,9 @@
             p.category
               span = "#{t('destinations.region')}: "
               = link_to @ranch.destination.region.name, destinations_path(region_id: @ranch.destination.region.id)
+            p.category
+              span = "#{t('main.destination')}: "
+              = link_to @ranch.destination.name, destination_path(@ranch.destination)
             p = @ranch.about
           .clearboth
       .clearboth
