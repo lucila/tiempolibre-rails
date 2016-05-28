@@ -2681,8 +2681,9 @@ nav.main_menu > select {
 }
 .block_our_team .teammate {
 	width:218px;
-	margin-left:18px;
-	margin-bottom:20px;
+	/* margin-left:18px;
+	margin-bottom:20px; */
+	margin: 5px 0px 20px 18px;
 	float:left;
 	background-color:#f7f7f7;
 	border-right-width: 1px;
@@ -2703,7 +2704,8 @@ nav.main_menu > select {
 }
 .block_our_team .teammate:hover{
 	cursor:pointer;
-    margin-top: -5px;
+  /*  margin-top: -5px;*/
+  margin: 0px 0px 25px 18px;
 	-webkit-box-shadow:0 0 15px rgba(0,0,0,0.2);
 	-moz-box-shadow:0 0 15px rgba(0,0,0,0.2);
 	box-shadow:0 0 15px rgba(0,0,0,0.2);

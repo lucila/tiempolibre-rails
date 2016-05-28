@@ -1,5 +1,7 @@
 en:
   all: 'Tudo'
+  main:
+    destination: 'Destino'
   destinations:
     about: 'Sobre %{name}'
     region: 'Região'

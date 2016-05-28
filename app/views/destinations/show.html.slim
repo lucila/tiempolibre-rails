@@ -11,16 +11,7 @@
               span = "#{t('destinations.region')}: "
               = link_to @destination.region.name, destinations_path(region_id: @destination.region.id)
             p = @destination.about
-            h6 = t('destinations.average_temperatures')
-            ul.details.weather
-              li.summer
-                span = "#{t('weather.summer')}:  #{@destination.summer_min}ºC - #{@destination.summer_max}ºC"
-              li.autumm
-                span = "#{t('weather.autumm')}:  #{@destination.fall_min}ºC - #{@destination.fall_max}ºC"
-              li.winter
-                span = "#{t('weather.winter')}:  #{@destination.winter_min}ºC - #{@destination.winter_max}ºC"
-              li.spring
-                span = "#{t('weather.spring')}:  #{@destination.spring_min}ºC - #{@destination.spring_max}ºC"
+            = render 'temperatures', destination: @destination
           .clearboth
       .clearboth
       - if @destination.excursions.any?
