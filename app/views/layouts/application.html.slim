@@ -18,8 +18,11 @@ html
           section.section_top
             .inner
               #logo
-                a href="/"
-                  img alt='Tiempo Libre' src="images/tiempolibre.png" title="Tiempo Libre"
+                = link_to '/' do
+                  h1
+                    span.logo_icon
+                    span.text Tiempo Libre
+                end
               /! --------------------- MAIN MENU ------------------------
               = render 'layouts/menu'
               /! --------------------- END OF MAIN MENU ------------------------

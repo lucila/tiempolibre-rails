@@ -64,3 +64,35 @@
   transition: all 0.3s ease;
 }
 
+#logo {
+  margin-top: 15px;
+  .logo_icon {
+    background-image: image_url('tiempolibre.png');
+    background-size: 88px 90px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    float: left;
+    padding: 0px;
+    height: 70px;
+    width: 68px;
+  }
+  span.text {
+    line-height: 70px;
+    color: #249FDD;
+    font-family: 'Arial';
+    font-size: 12px;
+    margin-left: -28px;
+    text-transform: uppercase;
+  }
+  a, a:hover {
+    text-decoration: none;
+  }
+}
+
+.color-tl-dark {
+  color: #212B81;
+}
+
+.color-tl-light {
+  color: #249FDD;
+}
