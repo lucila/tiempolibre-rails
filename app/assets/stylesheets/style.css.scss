@@ -335,9 +335,10 @@ header {}
 }
 .about_title_icon{
 	/*background-image:url(../images/icon-title/about.png);*/
-	background-image: image_url('icon-title/about.png');
+	background-image: image_url('placeholder.png');
 	background-repeat: no-repeat;
 	background-position: center center;
+	background-size: 31px 30px;
 	float: left;
 	margin-right: 12px;
 	margin-top: -12px;

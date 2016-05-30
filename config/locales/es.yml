@@ -9,6 +9,8 @@ es:
     cruises: 'Cruceros patagónicos'
     contact: 'Contacto'
     information: 'Información'
+    our_offices: 'Nuestras sucursales'
+    back_to_top: 'Volver arriba'
   destinations:
     about: 'Sobre %{name}'
     region: 'Región'

@@ -9,6 +9,8 @@ en:
     cruises: 'Patagonic cruises'
     contact: 'Contact'
     information: 'Information'
+    our_offices: 'Our offices'
+    back_to_top: 'Back to top'
   destinations:
     about: 'About %{name}'
     region: 'Region'

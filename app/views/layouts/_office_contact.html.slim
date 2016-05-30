@@ -1,0 +1,9 @@
+.column
+  .footer_title_footer
+    h1 = place
+  .block_footer_about
+    p = address
+    p = phone
+    - fax.present?
+      p = fax
+    p = email

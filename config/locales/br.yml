@@ -9,6 +9,8 @@ en:
     cruises: 'Cruzeiros Patagonia'
     contact: 'Contato'
     information: 'Informação'
+    our_offices: 'Nossas filiais'
+    back_to_top: 'De volta ao topo'
   destinations:
     about: 'Sobre %{name}'
     region: 'Região'
